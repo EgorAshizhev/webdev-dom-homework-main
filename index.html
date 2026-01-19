@@ -4,6 +4,7 @@
     <title>Проект "Комменты"</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./favicon.ico">
   </head>
 
   <body>
@@ -65,7 +66,45 @@
 
   <script>
     "use strict";
-    // Код писать здесь
-    console.log("It works!");
+  const nameInput = document.querySelector(".add-form-name");
+  const commentInput = document.querySelector(".add-form-text");
+  const addButton = document.querySelector(".add-form-button");
+  const commentsList = document.querySelector(".comments");
+
+  nameInput.addEventListener("input", () => {
+
+  });
+
+  commentInput.addEventListener("input", () => {
+  });
+
+  addButton.addEventListener("click", () => {
+    const name = nameInput.value;
+    const text = commentInput.value;
+
+    const date = new Date().toLocaleString();
+
+    const newComment = `
+      <li class="comment">
+        <div class="comment-header">
+          <div>${name}</div>
+          <div>${date}</div>
+        </div>
+        <div class="comment-body">
+          <div class="comment-text">
+            ${text}
+          </div>
+        </div>
+        <div class="comment-footer">
+          <div class="likes">
+            <span class="likes-counter">0</span>
+            <button class="like-button"></button>
+          </div>
+        </div>
+      </li>
+    `;
+
+    commentsList.innerHTML += newComment;
+  });
   </script>
 </html>
