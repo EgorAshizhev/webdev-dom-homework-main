@@ -1,5 +1,3 @@
-import replyingTo from "./script.js";
-replyingTo;
 const escapeHtml = (text) => {
     return text
         .replaceAll("&", "&amp;")

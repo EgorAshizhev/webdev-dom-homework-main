@@ -3,10 +3,8 @@ import { commentsList } from "./script.js";
 import { renderComment } from "./script.js";
 import { commentInput } from "./script.js";
 import { nameInput } from "./script.js";
-nameInput;
 import { quoteBlock, quoteAuthor, quoteText } from "./script.js";
 import replyingTo from "./script.js";
-replyingTo;
 
 
 
